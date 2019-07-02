@@ -1,7 +1,6 @@
 package logic;
 
-import java.util.Random;
-
 public class LearningTenWords {
-    Random random = new Random()
+  private int learnedWords = 0;
+  private boolean correct = false;
 }
