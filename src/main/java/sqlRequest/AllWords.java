@@ -1,3 +1,5 @@
+package sqlRequest;
+
 public class AllWords {
     private int id;
     private String polish_word;
