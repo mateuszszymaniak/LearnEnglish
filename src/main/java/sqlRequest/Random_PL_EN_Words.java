@@ -8,25 +8,27 @@ public class Random_PL_EN_Words {
         return DriverManager.getConnection(Constants.URL, Constants.USER, Constants.PASSWORD);
     }
 
-    public static void random_ten() {
+    public static String randomTen() {
         try (Connection conn = getConnection()) {
 
-            PreparedStatement random_ten = conn.prepareStatement(Constants.RANDOM_TEN);
-            ResultSet rs = random_ten.executeQuery();
+            PreparedStatement randomTen = conn.prepareStatement(Constants.RANDOM_TEN);
+            ResultSet rs =randomTen.executeQuery();
 
             while (rs.next()) {
                 rs.getString("polish_word");
                 rs.getString("english_word");
 
-                TenWords randomTen =
+
+                TenWords tenWords =
                         new TenWords(
                                 rs.getString("polish_word"),
                                 rs.getString("english_word"));
-                System.out.println(randomTen);
+                System.out.println(tenWords);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

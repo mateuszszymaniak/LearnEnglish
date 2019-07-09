@@ -8,7 +8,7 @@ public class ShowAll {
     return DriverManager.getConnection(Constants.URL, Constants.USER, Constants.PASSWORD);
   }
 
-  public static void show_all() {
+  public static void showAll() {
     try (Connection conn = getConnection()) {
 
       PreparedStatement show_all = conn.prepareStatement(Constants.SHOW_ALL);

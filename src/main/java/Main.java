@@ -1,11 +1,13 @@
 import logic.StudyTenWords;
+import sqlRequest.Random_PL_EN_Words;
 import sqlRequest.ShowAll;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws SQLException {
     Messages.hello();
 
     Scanner scanner = new Scanner(System.in);
@@ -13,11 +15,13 @@ public class Main {
 
     switch (menuNumber) {
       case 0:
+        // done
         Messages.goodbye();
       case 1:
-        StudyTenWords.letsStudy();
+        StudyTenWords.shuffle();
         break;
       case 2:
+        // zrobione
         Messages.chooseCategory();
         int categoryNumber = scanner.nextInt();
 
@@ -41,7 +45,8 @@ public class Main {
         }
         break;
       case 3:
-        ShowAll.show_all();
+        // zrobione
+        ShowAll.showAll();
         break;
     }
   }

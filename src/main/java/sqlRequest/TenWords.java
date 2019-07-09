@@ -28,9 +28,7 @@ public class TenWords {
 
     @Override
     public String toString() {
-        return "TenWords{" +
-                "polish_word='" + polish_word + '\'' +
-                ", english_word='" + english_word + '\'' +
-                '}';
+        return polish_word + " -> "
+                + english_word;
     }
 }
