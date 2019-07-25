@@ -6,7 +6,7 @@ public class Messages {
             + "Wybierz numer z menu \n"
             + "0 - wyjście z programu \n"
             + "1 - nauka losowych 10 słów \n"
-            + "2 - nauka wybranej kategorii \n"
+//            + "2 - nauka wybranej kategorii \n"
             + "3 - wyświetl bazę słów do nauki");
   }
 
