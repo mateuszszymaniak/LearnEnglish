@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class Main {
+public class LearnEnglishApplication {
 
   public static void main(String[] args) throws SQLException, IOException {
     Messages.hello();
@@ -15,13 +15,11 @@ public class Main {
 
     switch (menuNumber) {
       case 0:
-        // done
         Messages.goodbye();
       case 1:
         RandomTenWords.shuffle();
         break;
       case 2:
-        // done
         Messages.chooseCategory();
         int categoryNumber = scanner.nextInt();
 

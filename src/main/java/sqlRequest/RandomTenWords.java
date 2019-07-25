@@ -3,6 +3,8 @@ package sqlRequest;
 import java.io.IOException;
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 public class RandomTenWords {
@@ -22,36 +24,39 @@ public class RandomTenWords {
       st = con.prepareStatement(Constants.RANDOM_TEN);
       rs = st.executeQuery();
       while (rs.next()) {
-        Integer id = rs.getInt("id");
+        int id = rs.getInt("id");
         String polishWord = rs.getString("polish_word");
         String englishWord = rs.getString("english_word");
-        tw = new TenWords(id, polishWord, englishWord);
-
+        tw = new TenWords(polishWord, englishWord);
         unlearnedWords.put(id, tw);
       }
     } catch (Exception ex) {
       ex.printStackTrace();
     }
 
-    // splited words by id
-    //        System.out.println(unlearnedWords.get(i).toStringPolishWord() + " -> "
-    // +unlearnedWords.get(i).toStringEnglishWord());
+    while (unlearnedWords.size() != 0) {
+      Iterator<Map.Entry<Integer, TenWords>> iterator = unlearnedWords.entrySet().iterator();
+      while (iterator.hasNext()) {
+        Map.Entry<Integer, TenWords> entry = iterator.next();
 
-      for (Integer i : unlearnedWords.keySet()) {
-      Scanner scanner = new Scanner(System.in);
-      System.out.println("Proszę wpisać tłumaczenie");
-      System.out.println(unlearnedWords.get(i).toStringPolishWord());
-      String reply = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Proszę wpisać tłumaczenie");
+        System.out.println(entry.getValue().toStringPolishWord());
+        String reply = scanner.nextLine().toLowerCase();
 
-      // TODO if we make mistake programs end -> need to put unlearned word into map and continue loop
-      if (reply.contains(unlearnedWords.get(i).getEnglish_word())) {
-          System.out.println("Dobra robota :)");
-      } else {
-          System.out.println(unlearnedWords.get(i).getEnglish_word());
-          System.out.println("Za chwilę wrócimy do tego słowa");
-          return unlearnedWords.get(i).toStringPolishWord();
+        if (reply.contains(entry.getValue().getEnglish_word())) {
+          System.out.println("Dobra robota :) \n");
+          iterator.remove();
+          unlearnedWords.size();
+        } else {
+          System.out.println(entry.getValue().getEnglish_word());
+          System.out.println("Za chwilę wrócimy do tego słowa \n");
+          unlearnedWords.size();
+        }
       }
+      System.out.println("Liczba słów do powtórzenia: " + unlearnedWords.size() + "\n");
     }
-      return null;
+    System.out.println("Dziękuję za naukę");
+    return null;
   }
 }

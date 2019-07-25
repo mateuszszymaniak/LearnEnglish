@@ -2,22 +2,12 @@ package sqlRequest;
 
 public class TenWords {
 
-    private int id;
     private String polish_word;
     private String english_word;
 
-    public TenWords(int id, String polish_word, String english_word){
-        this.id = id;
+    public TenWords(String polish_word, String english_word){
         this.polish_word = polish_word;
         this.english_word = english_word;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getPolish_word() {
