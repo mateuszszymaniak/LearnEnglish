@@ -1,5 +1,6 @@
-import sqlRequest.RandomTenWords;
-import sqlRequest.ShowAll;
+import messages.Messages;
+import tenWords.RandomTenWords;
+import showBase.ShowAll;
 
 import java.io.IOException;
 import java.sql.SQLException;
