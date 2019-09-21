@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d716d4d8-1d30-4669-94c1-1d23370667de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/messages/Messages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/showBase/AllWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tenWords/TenWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LearnEnglishApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LearnEnglishApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Messages.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlRequest/AllWords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlRequest/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sql/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlRequest/RandomTenWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tenWords/RandomTenWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlRequest/ShowAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/showBase/ShowAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sqlRequest/TenWords.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LearnEnglish.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/LearnEnglish.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Messages.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlRequest/AllWords.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlRequest/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlRequest/ShowAll.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sqlRequest/TenWords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/messages/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/messages/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/showBase/ShowAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/showBase/ShowAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sql/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sql/SqlConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sql/SqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tenWords/RandomTenWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tenWords/RandomTenWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tenWords/TenWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tenWords/TenWords.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -50,6 +38,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/demo/demo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -61,6 +50,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="learnCategory" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,6 +124,12 @@
       <workItem from="1568446417326" duration="14220000" />
       <workItem from="1568631317446" duration="682000" />
       <workItem from="1568632718528" duration="18951000" />
+      <workItem from="1568727808838" duration="7788000" />
+      <workItem from="1568905354014" duration="7574000" />
+      <workItem from="1568913246530" duration="16796000" />
+      <workItem from="1568964452009" duration="24612000" />
+      <workItem from="1569001803312" duration="467000" />
+      <workItem from="1569075255894" duration="5027000" />
     </task>
     <servers />
   </component>
@@ -161,6 +161,11 @@
           <url>file://$PROJECT_DIR$/src/main/webapp/randomTenWords.jsp</url>
           <line>10</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sql/executeRequest/LearnAnimalsExecute.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

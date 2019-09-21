@@ -9,14 +9,14 @@ import lombok.*;
 @ToString
 public class TenWords {
 
-    private String polishWord;
-    private String englishWord;
+  private String polishWord;
+  private String englishWord;
 
-    public String toStringPolishWord() {
-        return polishWord;
-    }
+  public String toStringPolishWord() {
+    return polishWord;
+  }
 
-    public String toStringEnglishWord() {
-        return englishWord;
-    }
+  public String toStringEnglishWord() {
+    return englishWord;
+  }
 }

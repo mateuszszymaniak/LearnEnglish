@@ -1,11 +1,18 @@
 package messages;
 
+import menu.MenuContext;
+
+import java.sql.SQLException;
+
 public class Messages {
 
-  public static void hello() {
+  public void welcome() {
+    System.out.println("Witam w programie do nauki angielskiego");
+  }
+
+  public void menu() {
     System.out.println(
-        "Witam w programie do nauki angielskiego \n"
-            + "Wybierz numer z menu \n"
+        "\nWybierz numer z menu \n"
             + "0 - wyjście z programu \n"
             + "1 - nauka losowych 10 słów \n"
             + "2 - nauka wybranej kategorii \n"
@@ -13,12 +20,12 @@ public class Messages {
             + "Aby wyjść z programu podczas nauki wpisz -> stop");
   }
 
-  public static void goodbye() {
+  public void goodbye() {
     System.out.println("Dziękuję za współną naukę :)");
     System.exit(0);
   }
 
-  public static void chooseCategory() {
+  public void chooseCategory() {
     System.out.println(
         "Wybierz kategorię: \n"
             + "1 - człowiek \n"
@@ -28,12 +35,19 @@ public class Messages {
             + "5 - pogoda \n"
             + "6 - rodzina \n"
             + "7 - podróże \n"
-            + "8 - dom");
+            + "8 - dom \n"
+            + "9 - powrót do menu");
   }
 
-  public static void translateMsg(){
+  public void translateMsg() {
     String msg = "Proszę wpisać tłumaczenie";
     String please = String.format("%s", msg);
     System.out.println(please);
+  }
+
+  public void repeatMenuMessage() throws SQLException {
+    menu();
+    MenuContext mc = new MenuContext();
+    mc.menu();
   }
 }
